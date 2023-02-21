@@ -1,0 +1,13 @@
+www.nfckey.xyz to generate key and pack
+
+213 Tag 43 - password xxxxxxxx
+213 Tag 44 - pack xxxx0000
+
+215 Tag 85 - password xxxxxxxx
+215 Tag 86 - pack xxxx0000
+215 Tag 2b - password xxxxxxxx
+215 Tag 2c - pack xxxx0000
+
+hf mfu wrbl -b 43 -d xxxxxxxx
+hf mfu wrbl -b 44 -d xxxx0000 -k keyfromlastcommand
+script run hf_ntag_3d -c 57 -m50 -p 5448 -s 5553 -l 200
